@@ -9,7 +9,7 @@ export default class Timeline extends Component {
         this.setState({newTweet: e.target.value});
     }
 
-    handleKeyDown = (e) => {
+    handleNewTweet = (e) => {
         if(e.keyCode !== 13) return;
         const content = this.state.newTweet;
         const author = localStorage.getItem('@Twitter:username');
@@ -24,7 +24,7 @@ export default class Timeline extends Component {
                     <textarea
                         value={this.state.newTweet}
                         onChange={this.handleInputChange}
-                        onKeyDown={this.handleKeyDown}
+                        onKeyDown={this.handleNewTweet}
                         placeholder="O que você está pensando?"
                         >
 
