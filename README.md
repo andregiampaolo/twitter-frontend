@@ -1,5 +1,7 @@
 # Twitter frontend
 
+Projeto desenvolvido na semana OmniStack da Rocketseat.
+
 # Dependencies
 - React
 - React Routers Dom
@@ -16,6 +18,8 @@
 # To Config external api
 1. Go to file src/services/api.js
 2. Change the URL of external service
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
