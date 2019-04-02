@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import api from '../services/api';
 
+import Tweet from '../components/Tweet';
+
 export default class Timeline extends Component {
     state = {
         tweets : [],
@@ -40,6 +42,13 @@ export default class Timeline extends Component {
 
                     </textarea>
                 </form>
+                <section className="tweets-list">
+                    <ul>
+                        {this.state.tweets.map(tweet =>(
+                           <Tweet key={tweet._id} tweet={tweet} />
+                        ))}
+                    </ul>
+                </section>
             </div>
         )
     }
