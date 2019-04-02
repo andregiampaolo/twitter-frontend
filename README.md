@@ -4,12 +4,14 @@
 - React
 - React Routers Dom
 - Axios
+- Socker.io client
 
 
 # To install
 - ```yarn add create-react-app```
 - ```yarn add react-router-dom```
 - ```yarn add axios```
+- ```yarn add socket.io-client```
 
 # To Config external api
 1. Go to file src/services/api.js

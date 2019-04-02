@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import twitterLogo from '../twitter.svg';
+import './Login.css';
 
 export default class Login extends Component {
 
@@ -21,7 +23,7 @@ export default class Login extends Component {
     render(){
         return(
             <div className="login-wrapper">
-                <h1>Login</h1>
+                <img src={twitterLogo} alt="Twitter Logo" />
                 <form onSubmit={this.handleSubmit}>
                     <input 
                         value={this.state.username}
