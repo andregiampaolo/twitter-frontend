@@ -3,11 +3,17 @@
 # Dependencies
 - React
 - React Routers Dom
+- Axios
 
 
 # To install
 - ```yarn add create-react-app```
 - ```yarn add react-router-dom```
+- ```yarn add axios```
+
+# To Config external api
+1. Go to file src/services/api.js
+2. Change the URL of external service
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
