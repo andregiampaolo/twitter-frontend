@@ -3,8 +3,14 @@ import api from '../services/api';
 
 export default class Timeline extends Component {
     state = {
+        tweets : [],
         newTweet: ''
     };
+
+    async componentDidMount(){
+        const response = await api.get('tweets');
+        this.setState({tweets: response.data});
+    }
 
     handleInputChange = (e) => {
         this.setState({newTweet: e.target.value});
