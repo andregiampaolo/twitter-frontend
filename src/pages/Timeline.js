@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import api from '../services/api';
 
 export default class Timeline extends Component {
     state = {
@@ -9,11 +10,14 @@ export default class Timeline extends Component {
         this.setState({newTweet: e.target.value});
     }
 
-    handleNewTweet = (e) => {
+    handleNewTweet = async (e) => {
         if(e.keyCode !== 13) return;
         const content = this.state.newTweet;
         const author = localStorage.getItem('@Twitter:username');
-        console.log(content, author);
+        //api.post('route', data_object);
+        await api.post('tweets', {author, content});
+
+        this.setState({newTweet: ''});
     };
 
     render(){
